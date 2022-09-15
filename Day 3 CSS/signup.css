@@ -1,0 +1,44 @@
+.signup-form__title {
+    /* put some logic to center the title */
+    /* margin */
+}
+
+
+.signup-form__title--bold {
+    font-weight: bold;
+}
+.signup-form__title--thin {
+    font-weight: lighter;
+}
+.signup-form__title--red {
+    color: red;
+}
+
+
+
+.signup-form {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+}
+
+.signup-form__title {
+    text-align: center;
+}
+
+.signup-form__row {
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 10px;
+    margin: 5px;
+}
+
+.signup-form__input,
+.signup-form__btn {
+    flex-grow: 1;
+}
+
+
+

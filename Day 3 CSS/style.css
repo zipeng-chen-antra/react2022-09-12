@@ -1,0 +1,174 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  /* background-color: red; */
+}
+
+.box {
+  border: 2px solid black;
+}
+
+#name {
+  background-color: green;
+}
+
+.container .box {
+  background-color: aqua;
+}
+
+.container > .box {
+  background-color: blueviolet;
+}
+
+.something.name {
+  background-color: aquamarine;
+}
+
+.abc ~ .sibling {
+  background-color: violet;
+}
+
+.abc + .sibling {
+  border: 5px solid black;
+}
+
+/* //pseudo class selectors
+//:
+
+//pseudo element selectors
+//:: */
+
+span:first-child {
+  /* background-color: blue; */
+}
+
+p:nth-child(5n) {
+  background-color: aqua;
+}
+
+p:not(p:nth-child(4n)) {
+  /* background-color: blue; */
+}
+
+p:nth-of-type(p) {
+  background-color: blue;
+}
+
+p::before {
+  content: "";
+}
+
+p::after {
+  content: "";
+}
+
+.btn:hover {
+  cursor: not-allowed;
+}
+
+.input:focus {
+  border: 10px blue solid;
+}
+
+input[type="button"] {
+  border: 5px solid red;
+}
+
+#parentID #aaa {
+  background-color: blue;
+}
+
+#aaa.bbb {
+  background-color: red;
+}
+
+.box-model {
+  box-sizing: border-box;
+  width: 500px;
+  padding: 20px;
+  border: 20px solid black;
+
+  margin: 20px 10px;
+  /* margin: 20px 20px 20px 20px; */
+}
+
+.box-model1 {
+  margin-bottom: 70px;
+}
+
+.box-model2 {
+  margin-bottom: 10px;
+}
+
+.div,
+.span {
+  border: 1px solid black;
+}
+
+.title {
+  border: 1px solid black;
+}
+
+.title span {
+  display: inline-block;
+  background-color: red;
+  height: 50px;
+  width: 100px;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute-container {
+  position: relative;
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+}
+
+.absolute {
+  position: absolute;
+  border: 1px solid black;
+  background-color: red;
+  top: 100px;
+}
+
+.unit {
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+}
+
+.unit {
+  font-size: 20px;
+}
+
+.px {
+  font-size: 16px;
+}
+
+.rem {
+  font-size: 5rem;
+}
+
+.em {
+  font-size: 1em;
+}
+
+
+

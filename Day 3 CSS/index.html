@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 3 CSS</title>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+        <style>
+            /* .container {
+                border: 1px solid black;
+            } */
+        </style>
+        <div>div</div>
+        <h1>Title</h1>
+        <div id="name">NAME</div>
+        <br />
+
+        <section id="sectionID" class="container" style="font-size: 20px;">
+            <div class="box">Direct child</div>
+            <div class="box">
+                Something
+                <div class="box">BOX 1 grand children</div>
+                <div class="box">BOX 2 grand children</div>
+                <div class="box">BOX 3 grand children</div>
+                <p>lorem ipsum paragraph</p>
+            </div>
+        </section>
+
+        <div class="box">
+            Box outside of parent
+        </div>
+
+
+        <div>
+            <div>direct child</div>
+            <div>
+                <div>this won't be selected through direct child</div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="something">Something</div>
+        <div class="something name">Something Name</div>
+        <div class="name">Name</div>
+        
+        <br/>
+        <br/>
+        <br/>
+        <div class="parent">
+
+            <div class="sibling">Sibling not selected</div>
+            <div class="sibling">Sibling not selected</div>
+            <div class="sibling">Sibling not selected</div>
+            <h1 class="abc">All siblings</h1>
+            <div class="sibling">Sibling 1</div>
+            <p>random element</p>
+            <div class="sibling">Sibling 2</div>
+            <div class="sibling">Sibling 3</div>
+            <div class="sibling">Sibling 4</div>
+            <div class="sibling">Sibling 5</div>
+        </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <div class="p">
+            <span>What is Lorem Ipsum?</span> 
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        </div>  
+        <br/><br/>
+        
+        <div class="p">
+            <span>It has survived not only five centuries, but also the leap into electronic typesetting</span> 
+            remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div class="parent">
+            <p>This paragraph is the first child of its parent </p>
+            <div>This paragraph is not the first child of its parent .</div>
+            <p>This paragraph is the first child of its parent .</p>
+            <div>This paragraph is not the first child of its parent .</div>
+            <p>This paragraph is the first child of its parent </p>
+            <span class="dont">This paragraph is not the first child of its parent .</span>
+            <p class="dont">This paragraph is the first child of its parent .</p>
+            <p>This paragraph is not the first child of its parent .</p>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        <p class="element">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        
+        <button class="btn">CLICK</button>
+        <input type="text" class="input"/>
+        <input type="text" class="input"/>
+        <input type="button" class="input"/>
+        <input type="button" class="input"/>
+        <input type="button" class="input"/>
+        
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div id="parentID" class="container">    
+            <div id="aaa" class="bbb ccc ddd" lang="en" style="background-color: green;">
+                this is an all inclusive element
+            </div>
+        </div>
+
+        <div class="box-model box-model1">
+            content
+        </div>
+        <div class="box-model box-model2">
+            content
+        </div>
+        <div class="box-model box-model2">
+            content
+        </div>
+
+
+        <div class="div">div</div>
+        <div class="div">div</div>
+        <div class="div">div</div>
+
+        <span class="span">span</span>
+        <span class="span">span</span>
+        <span class="span">span</span>
+        <h1 class="title">this is a <span>long</span> title</h1>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        <div>static</div>
+        <div class="relative">relative</div>
+        <div>static</div>
+        <div class="absolute-container">
+            <div>static</div>
+            <div>static</div>
+            <div>static</div>
+            <div>static</div>
+            <div>static</div>
+            <div class="absolute">
+                absolute
+            </div>
+        </div>
+
+        <div class="unit">
+            <div class="px">16 px</div>
+            <div class="rem">2 rem</div>
+            <div class="em">1 em</div>
+        </div>
+
+        <form class="form">
+            <input class="form__input"/>
+            <button class="form__button--green">GREEN</button>
+            <button class="form__button--blue">BLUE</button>
+        </form>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </body>
+</html>
