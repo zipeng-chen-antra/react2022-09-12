@@ -1,0 +1,21 @@
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.a {
+    width: 70vw;
+    /* max-width: 500px; */
+    border: 1px solid black;
+}
+
+.container {
+    width: 50vw;
+    border: 1px solid black;
+}
+
+.b {
+    border: 1px solid black;
+    width: 70%;
+}
+
