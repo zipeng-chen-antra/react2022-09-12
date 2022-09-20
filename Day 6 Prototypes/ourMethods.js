@@ -1,7 +1,7 @@
 const arr = [1,2,3,4];
 
 arr.forEach((e,i,arr)=>{
-    console.log(e,i,arr)
+    // console.log(e,i,arr)
 })
 
 Array.prototype.ourForEach = function(cb){
@@ -11,7 +11,7 @@ Array.prototype.ourForEach = function(cb){
 }
 
 arr.ourForEach((e,i,arr)=>{
-    console.log(e,i,arr)
+    // console.log(e,i,arr)
 })
 
 //create your own map, filter, reduce;

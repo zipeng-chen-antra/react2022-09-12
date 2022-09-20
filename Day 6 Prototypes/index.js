@@ -36,8 +36,6 @@ Person.prototype.canDrink = function(){
 
 
 
-
-
 // Person.prototype.random = "random"
 // Person.prototype.random2 = "random2"
 // p1 = {
