@@ -48,56 +48,119 @@
 //     });
 // });
 
+let bunsConut = 3;
+
 function getBeef() {
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            resolve("beef")
-        }, 1000);
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("beef");
+    }, 1000);
+  });
+}
+
+function cookBeef(beef) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (beef) resolve("patty");
+      else reject("no beef");
+    }, 1000);
+  });
+}
+
+function getBuns() {
+  return new Promise((resolve,reject) => {
+    setTimeout(() => {
+        if(bunsConut>0){
+            resolve("buns");
+            bunsConut -= 1;
+        } else {
+            reject("we run out of buns")
+        }
+    }, 1000);
+  });
+}
+
+function makeBurger(patty, buns) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      if (patty && buns) resolve("burger");
+      else reject("no ingredient");
+    }, 1000);
+  });
+}
+
+async function asyncBurger() {
+    try {
+        const beef = await getBeef();
+        console.log(beef);
+        const patty = await cookBeef(beef);
+        console.log(patty);
+        const buns = await getBuns();
+        console.log(buns);
+        const burger = await makeBurger(patty, buns);
+        console.log(burger);
+    } catch(err){
+        console.log(err);
+    }
+}
+
+asyncBurger();
+asyncBurger();
+asyncBurger();
+asyncBurger();
+
+function thenBurger(){
+    getBeef()
+    .then((beef) => {
+        console.log(beef);
+        return cookBeef(beef);
+    })
+    .then((patty) => {
+        console.log(patty);
+        return getBuns();
+    })
+    .then((buns) => {
+        console.log(buns);
+        return makeBurger("patty", buns);
+    })
+    .then((burger) => {
+        console.log(burger);
+    })
+    .catch((err)=>{
+        console.log(err);
     })
 }
 
-function cookBeef(beef){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            if(beef) resolve("patty")
-            else reject("no beef");
-        }, 1000);
-    })
-}
+// thenBurger();
+// thenBurger();
+// thenBurger();
+// thenBurger();
 
-function getBuns(patty){
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            resolve({patty,buns:"buns"})
-        }, 1000);
-    })
-}
+///////////async await
 
-function makeBurger(patty,buns){
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            if(patty&&buns) resolve("burger")
-            else reject("no ingredient");
-        }, 1000);
-    })
-}
+// function getData(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve({data:"aiusjchqucojqw"});
+//         },3000)
+//     })
+// }
 
+// p.then(data=>{
+//     console.log(data);
+// })
 
-getBeef()
-.then((beef)=>{
-    console.log(beef)
-    return cookBeef(beef)
-}).then(patty=>{
-    console.log(patty);
-    return getBuns(patty)
-}).then(obj=>{
-    console.log(obj.buns,obj.patty)
-    return makeBurger(obj.patty,obj.buns)
-}).then(burger=>{
-    console.log(burger)
-})
+// console.log("hello")
 
+// async function foo(){
+//     // p.then(data=>{
+//     //     console.log(data);
+//     // })
 
+//     const data = await getData();
 
+//     console.log(data);
+//     console.log("hello inside async func")
 
-
+// }
+// foo();

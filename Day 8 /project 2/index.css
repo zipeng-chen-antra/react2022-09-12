@@ -1,0 +1,15 @@
+
+
+.count-container {
+    /* border: 1px solid black; */
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+    width: 400px;
+    /* height: 300px; */
+}
+
