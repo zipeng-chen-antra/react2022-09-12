@@ -1,0 +1,27 @@
+.search-form {
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 4rem;
+
+}
+
+.albums-container {
+    display: grid;
+    margin: auto;
+    width: 70vw;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+}
+
+.album {
+    border: 1px solid black;
+}
+
+.search-result {
+    text-align: center;
+
+}
