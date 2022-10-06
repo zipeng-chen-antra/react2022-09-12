@@ -85,8 +85,47 @@ const $$ = (selector) => {
 //   }).css("background-color","red")
 
 
-$$.ajax = (options) => {
+
+// const returnValue = $.ajax({
+//   url: "https://jsonplaceholder.typicode.com/comments",
+//   data: {
+//     postId: 1 
+//   },
+//   success: (result)=>{
+//     console.log(result)
+//   }
+// })
+
+
+$$.ajax = (option)=>{
+  const {url, data, success} = option;
+  let params = "";
+
+  const pairs = Object.entries(data)
+  for(let i=0;i<pairs.length;i++){
+    const [key, value] = pairs[i];
+    if(i===pairs.length-1){
+      params += `${key}=${value}`
+    } else {
+      params += `${key}=${value}&`
+    }
+  }
+
+
+
+  fetch(`${url}?${params}`)
+  .then(res=>res.json())
+  .then(success)
 
 }
 
-$$.ajax();
+$$.ajax({
+  url: "https://jsonplaceholder.typicode.com/comments",
+  data: {
+    postId: 1,
+  },
+  success: (result)=>{
+    console.log(result);
+  }
+})
+
