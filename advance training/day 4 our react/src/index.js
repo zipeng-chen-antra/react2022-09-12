@@ -14,6 +14,7 @@ const React = {
   },
 };
 
+
 const ReactDOM = {
   createRoot: (rootHtmlElement) => {
     const render = (rootReactElement) => {
