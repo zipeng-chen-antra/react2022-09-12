@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 //withCounter is just a component generator, all these generated components share a similar logic
 export function withCounter(InnerComponent) {
-  return function OuterComponent() {
+  return function OuterComponent({...props}) {
     const [count, setCount] = useState(0);
 
     const amountRef = useRef();
@@ -22,6 +22,7 @@ export function withCounter(InnerComponent) {
           reset={reset}
           addByAmount={addByAmount}
           amountRef={amountRef}
+          {...props}
         />
       </div>
     );
