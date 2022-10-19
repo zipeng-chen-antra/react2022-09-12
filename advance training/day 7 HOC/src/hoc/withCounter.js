@@ -17,11 +17,13 @@ export function withCounter(InnerComponent) {
       <div>
         <InnerComponent
           count={count}
+          setCount={setCount}
           increment={increment}
           decrement={decrement}
           reset={reset}
           addByAmount={addByAmount}
           amountRef={amountRef}
+
           {...props}
         />
       </div>

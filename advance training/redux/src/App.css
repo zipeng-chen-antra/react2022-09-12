@@ -1,0 +1,26 @@
+* {
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.tab {
+    border: 1px solid white;
+    padding: 0.5rem;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+.page {
+    padding: 1rem;
+}

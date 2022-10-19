@@ -24,10 +24,22 @@ import { withCounter } from "../hoc/withCounter";
 // }
 
 function CounterFn(props) {
-  const { count, increment, decrement, reset, addByAmount, amountRef, message } = props;
+  const {
+    count,
+    increment,
+    decrement,
+    reset,
+    addByAmount,
+    amountRef,
+    message,
+    sharedCount,
+    setSharedCount
+  } = props;
 
   return (
     <div>
+
+      <h1>Function Counter Component</h1>
       <div>{count}</div>
       <button onClick={reset}>reset</button>
       <button onClick={decrement}>minus</button>

@@ -33,6 +33,8 @@ export default class CounterClass extends Component {
   render() {
     return (
       <div>
+        <h1>Class Counter Component</h1>
+      
         <div>{this.state.count}</div>
         <button onClick={this.reset}>reset</button>
         <button onClick={this.decrement}>minus</button>

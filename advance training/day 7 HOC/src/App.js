@@ -1,43 +1,42 @@
 import { useState, useEffect } from "react";
 import CounterClass from "./components/CounterClass";
 import CounterFn from "./components/CounterFn";
-import PostList from "./components/PostList";
 import StockFn from "./components/StockFn";
+import "./App.css"
+import CounterHook from "./components/CounterHook";
 
+const pages = [
+  {name: "CounterFn", component: CounterFn},
+  {name: "CounterClass", component: CounterClass},
+  {name: "StockFn",component: StockFn},
+  {name: "CounterHook",component: CounterHook}
+] 
 
 
 export default function App() {
 
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [currentPage,setCurrentPage] = useState(pages[0]);
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        setTimeout(() => {
-          setPosts(data);
-          setLoading(false);
-        }, 2000);
-      });
-  }, []);
+  function renderPage(){
+    const Component = currentPage.component;
+    return <Component />
+  }
+
+  function changePage(page){
+    setCurrentPage(page);
+  }
 
   return (
     <div>
-      <PostList posts={posts} loading={loading}/>
-      {/* <CounterFn message="message"/> */}
-      {/* <StockFn />
-      <Button text="click me" style={{backgroundColor:"red"}}></Button> */}
+      <nav className="navbar">
+        {pages.map(page=>{
+          return <a key={page.name} onClick={()=>changePage(page)} className="tab">{page.name}</a>
+        })}
 
+      </nav>
+      <div className="page">
+      {renderPage()}
+      </div>
     </div>
   );
 }
-
-
-function Button({style,text}){
-  return <button style={style}>
-    {text}
-  </button>
-}
-
-
