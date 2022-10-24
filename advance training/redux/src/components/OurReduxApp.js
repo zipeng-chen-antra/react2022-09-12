@@ -27,7 +27,7 @@ export default function OurReduxApp() {
       </button>
       <button
         onClick={() => {
-          myStore.dispatch({ type: "aosjdioqwdwq" });
+          dispatch({ type: "aosjdioqwdwq" });
         }}
       >
         do nothing

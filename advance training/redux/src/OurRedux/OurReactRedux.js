@@ -4,16 +4,16 @@ import useForceUpdate from "../hooks/useForceUpdate";
 export const OurReactReduxContext = createContext();
 
 export function OurProvider({ store, children }) {
-  const [bool, toggle] = useState(true);
+  const forceUpdate = useForceUpdate()
 
   useEffect(() => {
     store.subscribe(() => {
-      toggle((prev) => !prev);
+      forceUpdate();
     });
   }, []);
 
   return (
-    <OurReactReduxContext.Provider key={bool ? "abc" : "abcd"} value={store}>
+    <OurReactReduxContext.Provider value={{...store}}>
       {children}
     </OurReactReduxContext.Provider>
   );
