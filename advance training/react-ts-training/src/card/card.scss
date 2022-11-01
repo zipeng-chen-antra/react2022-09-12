@@ -1,0 +1,48 @@
+// .card {
+
+// }
+
+
+// .card__title {
+
+// }
+
+
+// .card__title--light {
+
+// }
+
+// .card__title--dark {
+
+// }
+
+// .card__image {
+    
+// }
+
+
+.card {
+    // background-color: red;
+    width: 500px;
+    height: 500px;
+    border-radius: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+
+    &__title {
+        font-weight: 800;
+
+        &--dark {
+            color: black;
+            background-color: white;
+        }
+
+        &--light {
+            color: white;
+            background-color: black;
+        }
+    }
+
+}
+
+

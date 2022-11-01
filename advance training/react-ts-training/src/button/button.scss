@@ -1,0 +1,46 @@
+$color-btn-primary: blue;
+$color-btn-secondary: yellow;
+$color-btn-success: green;
+$color-btn-danger: red;
+$background-color-btn-primary: rgba(0, 0, 255, 0.3);
+$background-color-btn-secondary: rgba(255, 255, 0, 0.3);
+$background-color-btn-success: rgba(0, 255, 0, 0.3);
+$background-color-btn-danger: rgba(255, 0, 0, 0.3);
+
+@mixin btn($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+  border: 3px solid $colod;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.btn--sm {
+  font-size: 1rem;
+}
+
+.btn--md {
+  font-size: 2rem;
+}
+
+.btn--bg {
+  font-size: 3rem;
+}
+
+.btn--primary {
+  @include btn($color-btn-primary, $background-color-btn-primary);
+}
+
+.btn--secondary {
+  @include btn($color-btn-secondary, $background-color-btn-secondary);
+}
+
+.btn--success {
+  @include btn($color-btn-success, $background-color-btn-success);
+}
+.btn--danger {
+  @include btn($color-btn-danger, $background-color-btn-danger);
+}
